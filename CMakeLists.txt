@@ -1,0 +1,8 @@
+project(sp_lab4)
+cmake_minimum_required(VERSION 3.22)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/result)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/result)
+set(CMAKE_GENERATOR "Ninja")
+add_library(sp_lab4_lib SHARED calculator.cpp)
+add_executable(sp_lab4 main.cpp)
+target_link_libraries(sp_lab4 sp_lab4_lib)
